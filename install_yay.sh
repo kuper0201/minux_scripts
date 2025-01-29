@@ -19,7 +19,7 @@ su - "$USERNAME" -c "
     makepkg -si --noconfirm &&
     cd .. &&
     rm -rf yay &&
-    yay -Syu broadcom-wl-dkms
+    yay -Syu --noconfirm broadcom-wl-dkms
 "
 
 # 임시 사용자 제거
