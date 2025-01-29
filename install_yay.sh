@@ -12,8 +12,7 @@ echo "==> 임시 사용자에 sudo 권한 부여..."
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 # 시스템 업데이트 및 기본 패키지 설치 (루트 권한)
-pacman -Syu --noconfirm
-pacman -S --noconfirm base-devel git
+pacman -Syu --noconfirm base-devel git
 
 # 임시 사용자로 전환하여 yay 설치
 su - "$USERNAME" -c "
