@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacman -Syu --noconfirm linux-zen-headers networkmanager touchegg
+pacman -Syu --noconfirm linux-zen-headers networkmanager pulseaudio touchegg
 systemctl enable touchegg
 
 # check install_yay.sh
