@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacman -Syu --noconfirm linux-zen-headers networkmanager pulseaudio touchegg tlp
+pacman -Syu --noconfirm linux-zen-headers broadcom-wl-dkms networkmanager pulseaudio touchegg tlp
 systemctl enable touchegg
 systemctl enable tlp
 
