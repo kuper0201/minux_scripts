@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacman -Syu --noconfirm linux-lts-headers broadcom-wl-dkms networkmanager pulseaudio touchegg tlp
+pacman -Syu --noconfirm linux-lts-headers broadcom-wl-dkms networkmanager pulseaudio touchegg tlp git nano
 systemctl enable touchegg
 systemctl enable tlp
 
