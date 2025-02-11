@@ -5,6 +5,7 @@ pacman -Syu --needed --noconfirm fcitx5 fcitx5-im fcitx5-hangul fcitx5-configtoo
 pacman -Syu --needed --noconfirm jq network-manager-applet i3-gaps xorg-server xorg-xinit pcmanfm-gtk3 lxappearance alacritty xdotool kvantum kvantum-theme-materia materia-gtk-theme kvantum-qt5 qt5ct qt6ct libnotify
 pacman -Syu --needed --noconfirm lightdm lightdm-gtk-greeter
 
+systemctl enable NetworkManager
 systemctl enable lightdm
 systemctl enable touchegg
 systemctl enable tlp
@@ -19,4 +20,3 @@ EndSection" > /etc/X11/xorg.conf.d/40-libinput.conf
 
 # check install_yay.sh
 # yay -Syu --noconfirm broadcom-wl-dkms
-systemctl enable NetworkManager
