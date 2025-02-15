@@ -22,3 +22,4 @@ EndSection" > /etc/X11/xorg.conf.d/40-libinput.conf
 # yay -Syu --noconfirm broadcom-wl-dkms
 
 pacman -Scc --noconfirm
+rm -rf ~/.cache
