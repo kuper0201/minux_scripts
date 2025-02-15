@@ -16,7 +16,7 @@ su - "$USERNAME" -c "
     makepkg -si --noconfirm &&
     cd .. &&
     rm -rf yay &&
-    yay -Syu --noconfirm downgrade polybar rofi dunst compton feh ttf-nanum
+    yay -Syu --noconfirm downgrade polybar rofi dunst compton feh ttf-nanum &&
     yay -Scc --noconfirm
 "
 
