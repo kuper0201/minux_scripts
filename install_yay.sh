@@ -17,6 +17,7 @@ su - "$USERNAME" -c "
     cd .. &&
     rm -rf yay &&
     yay -Syu --noconfirm downgrade polybar rofi dunst compton feh ttf-nanum
+    yay -Scc --noconfirm
 "
 
 # 임시 사용자 제거
