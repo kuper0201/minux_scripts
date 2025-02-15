@@ -20,3 +20,5 @@ EndSection" > /etc/X11/xorg.conf.d/40-libinput.conf
 
 # check install_yay.sh
 # yay -Syu --noconfirm broadcom-wl-dkms
+
+pacman -Scc --noconfirm
