@@ -1,8 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -Eeuo pipefail
 
 pacman -Syu --needed --noconfirm linux-lts-headers broadcom-wl-dkms networkmanager git base-devel intel-ucode amd-ucode pulseaudio touchegg tlp nano
 pacman -Syu --needed --noconfirm fcitx5 fcitx5-im fcitx5-hangul fcitx5-configtool fcitx5-qt fcitx5-gtk
-pacman -Syu --needed --noconfirm jq network-manager-applet i3-gaps xorg-server xorg-xinit pcmanfm lxappearance alacritty xdotool kvantum kvantum-theme-materia materia-gtk-theme kvantum-qt5 qt5ct qt6ct libnotify
+pacman -Syu --needed --noconfirm jq network-manager-applet i3-wm xorg-server xorg-xinit pcmanfm lxappearance alacritty xdotool kvantum kvantum-theme-materia materia-gtk-theme kvantum-qt5 qt5ct qt6ct libnotify polybar rofi dunst picom feh
 pacman -Syu --needed --noconfirm lightdm lightdm-gtk-greeter
 
 systemctl enable NetworkManager
@@ -18,8 +19,6 @@ echo -e "Section \"InputClass\"
     Option \"TappingDragLock\" \"on\"
 EndSection" > /etc/X11/xorg.conf.d/40-libinput.conf
 
-# check install_yay.sh
-# yay -Syu --noconfirm broadcom-wl-dkms
 
 pacman -Scc --noconfirm
 rm -rf ~/.cache
