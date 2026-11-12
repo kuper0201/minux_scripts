@@ -7,3 +7,5 @@
 # What is this?
 
 Base scripts for build MINUX environment.
+
+The installer stops on package, AUR, or configuration errors. The desktop uses i3-wm and picom. User skeleton files retain their executable bits and private-file permissions.
