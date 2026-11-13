@@ -8,7 +8,8 @@ cd -- "$(dirname -- "${BASH_SOURCE[0]}")"
 dotfiles_dir=$(mktemp -d /root/minux-dotfiles.XXXXXX)
 trap 'rm -rf "$dotfiles_dir"' EXIT
 git -C "$dotfiles_dir" init -q
-git -C "$dotfiles_dir" fetch --depth 1 https://github.com/kuper0201/arch_i3wm 0c696b0291d5ea0de9c5c570163558a07d6055e9
+git -C "$dotfiles_dir" fetch --depth 1 https://github.com/kuper0201/arch_i3wm refs/heads/main
 git -C "$dotfiles_dir" checkout -q --detach FETCH_HEAD
+printf "Desktop configuration commit: %s\n" "$(git -C "$dotfiles_dir" rev-parse HEAD)"
 "$dotfiles_dir/install_iso.sh"
 ./update_user.sh
